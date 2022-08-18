@@ -1,7 +1,7 @@
-import VercelWelcome from '../components/VercelWelcome';
+import ComingSoon from '../components/ComingSoon';
 
 export default function Home() {
   return (
-    <VercelWelcome />
+    <ComingSoon />
   );
 }

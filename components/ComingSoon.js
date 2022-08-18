@@ -4,7 +4,52 @@ const comingSoon = () => {
 
             {/* Grid background */}
             <div className="grid-background absolute inset-0 p-2 grid grid-cols-12 gap-2 transform -skew-y-12 scale-150">
-            
+                {/* Row 1 */}
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-5 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-1 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-4 bg-gray-800 rounded animate-pulse"></div>
+
+                {/* Row 2 */}
+                <div className="col-span-5 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-3 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+
+                {/* Row 3 */}
+                <div className="col-span-4 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-7 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-1 bg-gray-800 rounded animate-pulse"></div>
+                
+                {/* Row 4 */}
+                <div className="col-span-4 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                
+                {/* Row 5 */}
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-5 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-1 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-4 bg-gray-800 rounded animate-pulse"></div>
+
+                {/* Row 6 */}
+                <div className="col-span-4 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-7 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-1 bg-gray-800 rounded animate-pulse"></div>
+
+                {/* Row 7 */}
+                <div className="col-span-5 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-1 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-3 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-3 bg-gray-800 rounded animate-pulse"></div>
+                
+                {/* Row 8 */}
+                <div className="col-span-2 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-5 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-1 bg-gray-800 rounded animate-pulse"></div>
+                <div className="col-span-4 bg-gray-800 rounded animate-pulse"></div>
             </div>
 
             {/* Content */}

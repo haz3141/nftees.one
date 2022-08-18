@@ -1,6 +1,14 @@
+import Head from 'next/head';
+
 const comingSoon = () => {
     return (
         <div className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+
+        <Head>
+            <title>NFTees One - NFT Apparel Marketplace</title>
+            <meta name="description" content="The World's First NFTee Marketplace" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
             {/* Grid background */}
             <div className="grid-background absolute inset-0 p-2 grid grid-cols-12 gap-2 transform -skew-y-12 scale-150">

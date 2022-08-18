@@ -17,19 +17,21 @@ export default function Home() {
           </a>
         </h1>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+        <h2>
+          <p className="mt-3 text-2xl">
+            Get started by editing{' '}
+            <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
+              pages/index.js
+            </code>
+          </p>
+        </h2>
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
           <a 
             href="https://nextjs.org/docs" 
             className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
-            <h2>Documentation &rarr;</h2>
+            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
             <p className="mt-4 text-xl">
               Find in-depth information about Next.js features and API.
             </p>
@@ -39,7 +41,7 @@ export default function Home() {
             href="https://nextjs.org/learn" 
             className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
-            <h2>Learn &rarr;</h2>
+            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
             <p className="mt-4 text-xl">
               Learn about Next.js in an interactive course with quizzes!
             </p>
@@ -49,7 +51,7 @@ export default function Home() {
             href="https://github.com/vercel/next.js/tree/canary/examples"
             className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
-            <h2>Examples &rarr;</h2>
+            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
             <p className="mt-4 text-xl">
               Discover and deploy boilerplate example Next.js projects.
             </p>
@@ -59,7 +61,7 @@ export default function Home() {
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
-            <h2>Deploy &rarr;</h2>
+            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
             <p className="mt-4 text-xl">
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>

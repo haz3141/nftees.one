@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import useRandom from './useRandom';
 
-const comingSoon = () => {
+const ComingSoon = () => {
     useRandom();
     return (
         <div className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
@@ -94,4 +94,4 @@ const comingSoon = () => {
     );
 }
 
-export default comingSoon;
+export default ComingSoon;

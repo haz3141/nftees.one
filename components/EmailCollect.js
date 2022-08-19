@@ -12,13 +12,18 @@ const EmailCollect = () => {
                     </Label>
                 </div>
                 <TextInput
+                    disabled
                     id="email1"
                     type="email"
-                    placeholder="name@flowbite.com"
+                    placeholder="satoshi@bitcoin.com"
                     required
                 />
             </div>
-            <Button type="submit">Submit</Button>
+            <Button 
+                disabled
+                type="submit">
+                    Submit
+            </Button>
         </form>
     );
 }

@@ -5,7 +5,6 @@ import EmailCollect from './EmailCollect';
 
 const ComingSoon = () => {
   useEffect(() => {
-    // document.querySelectorAll('.grid-background > div')
     // Loop over grid items and create random duration and delay
     document
       .querySelectorAll<HTMLElement>('.grid-background > div')

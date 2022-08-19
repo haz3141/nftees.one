@@ -16,6 +16,7 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "flowbite": "^1.5.2",
     "flowbite-react": "^0.1.9",
     "next": "12.2.5",

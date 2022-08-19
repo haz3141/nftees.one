@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import React from 'react';
 import {useEffect} from 'react';
 import EmailCollect from './EmailCollect';
 
@@ -6,16 +7,18 @@ const ComingSoon = () => {
   useEffect(() => {
     // document.querySelectorAll('.grid-background > div')
     // Loop over grid items and create random duration and delay
-    document.querySelectorAll('.grid-background > div').forEach(elem => {
-      // Calculate random number for delay
-      const delay = getRandomInt(0, 5);
-      // Calculate random number for duration
-      const duration = getRandomInt(3, 6);
+    document
+      .querySelectorAll<HTMLElement>('.grid-background > div')
+      .forEach(elem => {
+        // Calculate random number for delay
+        const delay = getRandomInt(0, 5);
+        // Calculate random number for duration
+        const duration = getRandomInt(3, 6);
 
-      // Set both
-      elem.style.animationDelay = `${delay}s`;
-      elem.style.animationDuration = `${duration}s`;
-    });
+        // Set both
+        elem.style.animationDelay = `${delay}s`;
+        elem.style.animationDuration = `${duration}s`;
+      });
 
     function getRandomInt(min, max) {
       min = Math.ceil(min);

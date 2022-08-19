@@ -1,16 +1,36 @@
 import Head from 'next/head';
-import useRandom from './useRandom';
+import { useEffect } from "react";
 
 const ComingSoon = () => {
-    useRandom();
+    useEffect(() => {
+        // document.querySelectorAll('.grid-background > div')
+        // Loop over grid items and create random duration and delay
+        document.querySelectorAll('.grid-background > div')
+            .forEach((elem) => {
+                // Calculate random number for delay
+                let delay = getRandomInt(0, 5);
+                // Calculate random number for duration
+                let duration = getRandomInt(3, 6);
+            
+                // Set both
+                elem.style.animationDelay = `${delay}s`;
+                elem.style.animationDuration = `${duration}s`;
+            });
+        
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+        
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    });
+
     return (
         <div className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
-
             <Head>
                 <title>NFTees One - NFT Apparel Marketplace</title>
                 <meta name="description" content="The World's First NFTee Marketplace" />
                 <link rel="icon" href="/favicon.ico" />
-
             </Head>
 
             {/* Grid background */}

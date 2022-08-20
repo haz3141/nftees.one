@@ -21,15 +21,13 @@ const SingleForm = () => {
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             id="exampleInput91"
             placeholder="Email address"
-            disabled
           />
         </div>
-        <div className="form-group form-check text-center mb-6">
+        <div className="form-group form-check mt-3 text-center mb-5">
           <input
             type="checkbox"
             className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
             id="aggreeTOS"
-            disabled
           />
           <label
             className="form-check-label inline-block text-gray-800"
@@ -57,7 +55,6 @@ const SingleForm = () => {
             transition
             duration-150
             ease-in-out"
-          disabled
         >
           Subscribe
         </button>

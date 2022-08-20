@@ -55,6 +55,7 @@ const SingleForm = () => {
             transition
             duration-150
             ease-in-out"
+          disabled
         >
           Subscribe
         </button>

@@ -1,10 +1,19 @@
 {
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.format": true
+  "[javascript]": {
+    "editor.formatOnSave": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "[javascriptrect]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  }
 }

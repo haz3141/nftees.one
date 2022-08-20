@@ -1,7 +1,7 @@
 import {Button, Label, TextInput} from 'flowbite-react';
 import React from 'react';
 
-const EmailCollect = () => {
+const EmailCollector = () => {
   return (
     <form className="flex flex-col gap-4">
       <div>
@@ -22,4 +22,4 @@ const EmailCollect = () => {
   );
 };
 
-export default EmailCollect;
+export default EmailCollector;

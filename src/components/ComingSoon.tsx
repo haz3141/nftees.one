@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import {useEffect} from 'react';
-import EmailCollect from './EmailCollect';
+import EmailCollect from './EmailCollector';
 
 const ComingSoon = () => {
   useEffect(() => {

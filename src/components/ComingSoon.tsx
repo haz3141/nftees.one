@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import {useEffect} from 'react';
-import EmailCollect from './EmailCollector';
+import EmailCollector from './EmailCollector';
 
 const ComingSoon = () => {
   useEffect(() => {
@@ -116,7 +116,7 @@ const ComingSoon = () => {
           </h2>
         </section>
         <section>
-          <EmailCollect />
+          <EmailCollector />
         </section>
       </div>
     </div>

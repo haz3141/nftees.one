@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import {useEffect} from 'react';
 import SubscribeForm from './SubscribeForm';
+import SingleForm from './SingleForm';
 
 const ComingSoon = () => {
   useEffect(() => {
@@ -114,7 +115,8 @@ const ComingSoon = () => {
             </div>
             Soon
           </h2>
-          <SubscribeForm />
+          {/* <SubscribeForm /> */}
+          <SingleForm />
         </section>
       </div>
     </div>

@@ -115,7 +115,9 @@ const ComingSoon = () => {
             </div>
             Soon
           </h2>
-          {/* <SubscribeForm /> */}
+          <div hidden>
+            <SubscribeForm />
+          </div>
           <SingleForm />
         </section>
       </div>

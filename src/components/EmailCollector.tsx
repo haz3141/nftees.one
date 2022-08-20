@@ -3,21 +3,19 @@ import React from 'react';
 
 const EmailCollector = () => {
   return (
-    <form className="flex flex-col gap-4">
+    <form>
       <div>
-        <div className="text-white mb-2 block">
-          <Label htmlFor="email1">
-            <div className="text-white">Your email</div>
-          </Label>
-        </div>
+        <Label htmlFor="email1">
+          <div className="text-white">Your email</div>
+        </Label>
         <TextInput
           id="email1"
           type="email"
           placeholder="satoshin@gmx.com"
           required
         />
+        <Button type="submit">Submit</Button>
       </div>
-      <Button type="submit">Submit</Button>
     </form>
   );
 };

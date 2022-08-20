@@ -4,7 +4,11 @@
     "rootDir": ".",
     "outDir": "build",
     "target": "es2018",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,6 +25,9 @@
   "include": [
     "next-env.d.ts",
     "src/**/*.ts",
-    "test/**/*.ts"
+    "test/**/*.ts",
+    "src/components/EmailCollector.tsx",
+    "src/components/SubscribeForm.tsx",
+    "src/pages/index.tsx"
   ]
 }

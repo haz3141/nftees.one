@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import React from 'react';
 import {useEffect} from 'react';
-import EmailCollect from './EmailCollect';
+import SubscribeForm from './SubscribeForm';
+import SingleForm from './SingleForm';
 
 const ComingSoon = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const ComingSoon = () => {
         elem.style.animationDuration = `${duration}s`;
       });
 
-    function getRandomInt(min, max) {
+    function getRandomInt(min: number, max: number) {
       min = Math.ceil(min);
       max = Math.floor(max);
 
@@ -114,9 +115,10 @@ const ComingSoon = () => {
             </div>
             Soon
           </h2>
-        </section>
-        <section>
-          <EmailCollect />
+          <div hidden>
+            <SubscribeForm />
+          </div>
+          <SingleForm />
         </section>
       </div>
     </div>

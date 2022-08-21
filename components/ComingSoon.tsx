@@ -90,7 +90,7 @@ const ComingSoon = () => {
       {/* Content */}
       <div className="relative">
         <section>
-          <h2 className="text-white text-4xl md:text-8xl font-bold flex flex-row items-center">
+          <h2 className="justify-center text-white text-6xl md:text-8xl font-bold flex flex-row items-center">
             Coming
             <div className="relative text-sm mx-2">
               <svg
@@ -113,7 +113,6 @@ const ComingSoon = () => {
             </div>
             Soon
           </h2>
-          <div hidden>{/* FOR TESTING ONLY */}</div>
           <EmailForm />
         </section>
       </div>

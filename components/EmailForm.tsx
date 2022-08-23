@@ -38,6 +38,7 @@ const SingleForm = () => {
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             name="email"
             placeholder="Email address"
+            required
           />
         </div>
         <div className="form-group form-check mt-3 text-center mb-5">

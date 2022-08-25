@@ -10,10 +10,19 @@ export default async function handler(
   const collection = db.collection('users');
 
   if (req.method === 'POST') {
-    await collection.insertOne({
-      email: req.body,
+    const userEmail = req.body;
+    const emailExists = await collection.findOne({
+      email: userEmail,
     });
-    res.send(201);
+
+    if (!emailExists) {
+      await collection.insertOne({
+        email: userEmail,
+      });
+      res.status(201).send(201);
+    } else {
+      res.send(422);
+    }
   } else {
     res.send(404);
   }

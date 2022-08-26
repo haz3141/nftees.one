@@ -30,7 +30,7 @@ const EmailForm = () => {
     <div className="block m-6 p-6 rounded-lg shadow-lg bg-white">
       <h2
         className="text-center tracking-wider
-      text-2xl leading-7 mb-4"
+        text-sm md:text-2xl mb-3"
       >
         Subscribe to get the latest{' '}
         <span className="text-orange-400">news & updates</span>.

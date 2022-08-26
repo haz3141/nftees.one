@@ -1,6 +1,4 @@
 import EmailForm from './EmailForm';
-import Image from 'next/image';
-import bus from '../public/bus.png';
 
 const ComingSoon = () => {
   return (

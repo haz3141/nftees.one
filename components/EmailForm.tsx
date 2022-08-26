@@ -32,7 +32,7 @@ const EmailForm = () => {
         className="text-center tracking-wider
         text-sm md:text-2xl mb-3"
       >
-        Subscribe to get the latest{' '}
+        Subscribe to get the latest
         <span className="text-orange-400">news & updates</span>.
       </h2>
       <form method="POST" onSubmit={handleSubmit}>

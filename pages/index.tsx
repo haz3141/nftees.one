@@ -1,8 +1,8 @@
 import type {NextPage} from 'next';
-import ComingSoon from '../components/ComingSoon';
+import Base from '../components/Base';
 
 const Home: NextPage = () => {
-  return <ComingSoon />;
+  return <Base />;
 };
 
 export default Home;

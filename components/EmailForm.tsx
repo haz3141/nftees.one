@@ -1,6 +1,6 @@
 import {FormEvent} from 'react';
 
-const SingleForm = () => {
+const EmailForm = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -91,4 +91,4 @@ const SingleForm = () => {
   );
 };
 
-export default SingleForm;
+export default EmailForm;

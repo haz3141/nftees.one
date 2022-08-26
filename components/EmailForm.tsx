@@ -30,7 +30,7 @@ const EmailForm = () => {
     <div className="block m-6 p-6 rounded-lg shadow-lg bg-white">
       <form method="POST" onSubmit={handleSubmit}>
         <fieldset>
-          <legend className="mb-2">Subscribe to our newslettergit </legend>
+          <legend className="mb-2">Subscribe to our newsletter</legend>
           <div>
             <input
               type="email"

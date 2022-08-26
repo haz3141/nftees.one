@@ -39,6 +39,8 @@ const SingleForm = () => {
               type="email"
               name="email"
               id="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Email must be in a valid format: name@domain.xy"
               placeholder="Email address"
               required
               className="form-control block

@@ -31,16 +31,15 @@ const EmailForm = () => {
       <form method="POST" onSubmit={handleSubmit}>
         <fieldset>
           <legend className="mb-2">Subscribe to our newsletter</legend>
-          <div>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              title="Email must be in a valid format: name@domain.xy"
-              placeholder="Email address"
-              required
-              className="form-control block
+          <input
+            type="email"
+            name="email"
+            id="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Email must be in a valid format: name@domain.xy"
+            placeholder="Email address"
+            required
+            className="form-control block
               w-full
               px-3
               py-1.5
@@ -57,8 +56,7 @@ const EmailForm = () => {
               focus:[&:not(:placeholder-shown)]:invalid:shadow-[0px_0px_0px_2px_rgba(255,0,147,.7)]
               focus:valid:shadow-[0px_0px_0px_2px_rgba(96,223,137,.5)]
               "
-            />
-          </div>
+          />
           <button
             type="submit"
             className="w-full

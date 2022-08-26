@@ -27,10 +27,10 @@ const EmailForm = () => {
   };
 
   return (
-    <div className="block m-6 p-6 rounded-lg shadow-lg bg-white">
+    <div className="relative m-6 mt-3 p-6 rounded-lg shadow-lg bg-white">
       <h2
         className="text-center tracking-wider
-        text-black text-sm md:text-2xl mb-3"
+        text-black text-base md:text-2xl mb-3"
       >
         Subscribe to get the latest{' '}
         <span className="text-orange-400">news & updates</span>.

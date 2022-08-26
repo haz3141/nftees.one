@@ -2,6 +2,8 @@ import Head from 'next/head';
 import {useEffect} from 'react';
 import NavBar from './NavBar';
 import ComingSoon from './ComingSoon';
+import EmailForm from './EmailForm';
+import BusImage from './BusImage';
 
 const Base = () => {
   useEffect(() => {
@@ -28,7 +30,7 @@ const Base = () => {
   });
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+    <div className="relative min-h-screen flex flex-wrap items-center justify-center bg-gray-900 overflow-hidden">
       {/* Metadata */}
       <Head>
         <title>NFTees One - NFT Apparel Marketplace</title>
@@ -93,8 +95,11 @@ const Base = () => {
       <NavBar />
 
       {/* Content */}
-      <ComingSoon />
-
+      <div className="relative">
+        <ComingSoon />
+        <BusImage />
+        <EmailForm />
+      </div>
       {/* Footer */}
     </div>
   );

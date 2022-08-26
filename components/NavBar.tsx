@@ -29,7 +29,7 @@ const NavBar = () => {
               src={logo}
               height={'20px'}
               width={'53px'}
-              alt=""
+              alt="Logo"
               loading="lazy"
             />
             <span className="font-medium ml-2">NFTees One</span>

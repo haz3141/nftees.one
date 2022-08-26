@@ -1,10 +1,12 @@
 import EmailForm from './EmailForm';
+import Image from 'next/image';
+import bus from '../public/bus.png';
 
 const ComingSoon = () => {
   return (
     <div className="relative">
       <section>
-        <h2 className="justify-center text-white text-6xl md:text-8xl font-bold flex flex-row items-center">
+        <h1 className="justify-center text-white text-6xl md:text-8xl font-bold flex flex-row items-center">
           Coming
           <div className="relative text-sm mx-2">
             <svg
@@ -26,7 +28,7 @@ const ComingSoon = () => {
             </div>
           </div>
           Soon
-        </h2>
+        </h1>
         <EmailForm />
       </section>
     </div>

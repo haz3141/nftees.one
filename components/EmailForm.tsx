@@ -28,18 +28,23 @@ const EmailForm = () => {
 
   return (
     <div className="block m-6 p-6 rounded-lg shadow-lg bg-white">
+      <h2
+        className="text-center tracking-wider
+      text-2xl leading-7 mb-4"
+      >
+        Subscribe to get the latest{' '}
+        <span className="text-orange-400">news & updates</span>.
+      </h2>
       <form method="POST" onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>Subscribe to our newsletter</legend>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-            title="Email must be in a valid format: name@domain.xy"
-            placeholder="Email address"
-            required
-            className="form-control block
+        <input
+          type="email"
+          name="email"
+          id="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Email must be in a valid format: name@domain.xy"
+          placeholder="Email address"
+          required
+          className="form-control block
               w-full
               px-3
               py-1.5
@@ -56,10 +61,10 @@ const EmailForm = () => {
               focus:[&:not(:placeholder-shown)]:invalid:shadow-[0px_0px_0px_2px_rgba(255,0,147,.7)]
               focus:valid:shadow-[0px_0px_0px_2px_rgba(96,223,137,.5)]
               "
-          />
-          <button
-            type="submit"
-            className="w-full
+        />
+        <button
+          type="submit"
+          className="w-full
             mt-3
             px-6
             py-2.5
@@ -77,10 +82,9 @@ const EmailForm = () => {
             transition
             duration-150
             ease-in-out"
-          >
-            Subscribe
-          </button>
-        </fieldset>
+        >
+          Subscribe
+        </button>
       </form>
     </div>
   );

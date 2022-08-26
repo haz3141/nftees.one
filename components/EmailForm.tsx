@@ -30,7 +30,7 @@ const SingleForm = () => {
     <div className="block m-6 p-6 rounded-lg shadow-lg bg-white">
       <form method="POST" onSubmit={handleSubmit}>
         <fieldset>
-          <legend>
+          <legend className="mb-2">
             Subscribe to our newsletter to stay up-to-date with all things
             NFTees
           </legend>
@@ -54,22 +54,12 @@ const SingleForm = () => {
               transition
               ease-in-out
               m-0
-              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              focus:outline-none focus:shadow-[0px_0px_0px_2px_rgba(0,170,255,1)]
+              focus:[&:not(:placeholder-shown)]:invalid:shadow-[0px_0px_0px_2px_rgba(255,0,147,.7)]
+              focus:valid:shadow-[0px_0px_0px_2px_rgba(96,223,137,.5)]
+              "
             />
           </div>
-          {/* <div className="form-group form-check mt-3 text-center mb-5">
-          <input
-            type="checkbox"
-            className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
-            name="agreeTOS"
-          />
-          <label
-            className="form-check-label inline-block text-gray-800"
-            htmlFor="agreeTOS"
-          >
-            I have read and agree to the terms
-          </label>
-        </div> */}
           <button
             type="submit"
             className="w-full

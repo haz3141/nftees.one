@@ -1,6 +1,29 @@
-import {FormEvent} from 'react';
+import {FormEvent, useEffect, useState} from 'react';
+
+const Header = ({title}: {title: boolean}) => {
+  return (
+    <h2
+      className="text-center tracking-wider
+        text-black font-semibold text-lg md:text-2xl pb-3"
+    >
+      {title ? `Thank you for` : `Subscribe to get the latest`}{' '}
+      <span className="text-orange-400">
+        {title ? 'subscribing' : `news & updates`}
+      </span>
+      .
+    </h2>
+  );
+};
 
 const EmailForm = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (submitted) {
+      console.log(submitted);
+    }
+  }, [submitted]);
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = {
@@ -22,7 +45,10 @@ const EmailForm = () => {
             'Content-Type': 'application/json',
           },
         }).then(res => {
-          alert(res.status);
+          if (res.status === 202) {
+            setSubmitted(true);
+            (event.target as HTMLFormElement).email.value = '';
+          }
         });
       } else {
         alert(res.status);
@@ -32,18 +58,12 @@ const EmailForm = () => {
 
   return (
     <div
-      className="relative m-6 mt-3 pt-4 p-5
+      className="relative w-auto m-6 mt-3 pt-4 p-5
       rounded-lg shadow-lg
       bg-white"
     >
       <label htmlFor="email">
-        <h2
-          className="text-center tracking-wider
-        text-black font-semibold text-lg md:text-2xl pb-3"
-        >
-          Subscribe to get the latest{' '}
-          <span className="text-orange-400">news & updates</span>.
-        </h2>
+        <Header title={submitted} />
       </label>
       <form method="POST" onSubmit={handleSubmit}>
         <input

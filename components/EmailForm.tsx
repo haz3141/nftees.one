@@ -8,7 +8,7 @@ const Header = ({status}: {status: boolean}) => {
     >
       {status ? `Thank you for` : `Subscribe to get the latest`}{' '}
       <span className="text-orange-400">
-        {status ? `subscribing` : `news & updates`}
+        {status ? `joining us on the journey` : `news & updates`}
       </span>
       .
     </h2>
@@ -50,7 +50,7 @@ const EmailForm = () => {
 
   return (
     <div
-      className="relative w-auto m-6 mt-3 pt-4 p-5
+      className="relative max-w-full m-6 mt-3 pt-4 p-5
       rounded-lg shadow-lg
       bg-white"
     >

@@ -22,7 +22,6 @@ const NavBar = () => {
             className="flex items-center
               text-white
               hover:text-blue-400
-              focus:text-blue-200
               mt-2 lg:mt-0 mr-1"
           >
             <Image

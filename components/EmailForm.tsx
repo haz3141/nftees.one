@@ -1,25 +1,31 @@
 import {FormEvent, useState} from 'react';
 
-const Header = ({status}: {status: boolean}) => {
+const Header = ({subscriptionStatus}: {subscriptionStatus: boolean}) => {
   return (
     <h2
       className="text-center tracking-wider
         text-black font-semibold text-lg md:text-2xl pb-3"
     >
-      {status ? `Thank you for` : `Subscribe to get the latest`}{' '}
+      {subscriptionStatus ? `Thank you for` : `Subscribe to get the latest`}{' '}
       <span className="text-orange-400">
-        {status ? `joining us on the journey` : `news & updates`}
+        {subscriptionStatus ? `joining our journey` : `news & updates`}
       </span>
       .
     </h2>
   );
 };
 
-const Button = ({status}: {status: boolean}) => {
+const Button = ({
+  loadingStatus,
+  subscriptionStatus,
+}: {
+  loadingStatus: boolean;
+  subscriptionStatus: boolean;
+}) => {
   return (
     <button
       type="submit"
-      disabled={status}
+      disabled={loadingStatus && subscriptionStatus}
       className="w-full
             mt-3
             px-6
@@ -39,7 +45,11 @@ const Button = ({status}: {status: boolean}) => {
             duration-150
             ease-in-out"
     >
-      {status ? `Loading` : `Subscribe`}
+      {loadingStatus
+        ? `Loading`
+        : subscriptionStatus
+        ? `Welcome Email Sent`
+        : `Subscribe`}
     </button>
   );
 };
@@ -65,6 +75,7 @@ const EmailForm = () => {
     setIsLoading(true);
 
     await fetch('/api/users', payload).then(async res => {
+      res.json();
       if (res.status === 201) {
         await fetch('/api/mail', payload).then(async res => {
           if (res.status === 202) {
@@ -79,12 +90,12 @@ const EmailForm = () => {
 
   return (
     <div
-      className="relative max-w-full m-6 mt-3 pt-4 p-5
+      className="relative box-border m-6 mt-3 pt-4 p-5
       rounded-lg shadow-lg
       bg-white"
     >
       <label htmlFor="email">
-        <Header status={isSubscribed} />
+        <Header subscriptionStatus={isSubscribed} />
       </label>
       <form method="POST" onSubmit={handleSubmit}>
         <input
@@ -113,7 +124,7 @@ const EmailForm = () => {
               focus:valid:shadow-[0px_0px_0px_2px_rgba(96,223,137,.5)]
               "
         />
-        <Button status={isLoading} />
+        <Button loadingStatus={isLoading} subscriptionStatus={isSubscribed} />
       </form>
     </div>
   );

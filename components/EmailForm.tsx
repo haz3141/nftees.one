@@ -15,6 +15,35 @@ const Header = ({status}: {status: boolean}) => {
   );
 };
 
+const Button = ({status}: {status: boolean}) => {
+  return (
+    <button
+      type="submit"
+      disabled={status}
+      className="w-full
+            mt-3
+            px-6
+            py-2.5
+            bg-blue-600
+            text-white
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            rounded
+            shadow-md
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
+            transition
+            duration-150
+            ease-in-out"
+    >
+      {status ? `Loading` : `Subscribe`}
+    </button>
+  );
+};
+
 const EmailForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -84,30 +113,7 @@ const EmailForm = () => {
               focus:valid:shadow-[0px_0px_0px_2px_rgba(96,223,137,.5)]
               "
         />
-        <button
-          type="submit"
-          disabled={isLoading}
-          className="w-full
-            mt-3
-            px-6
-            py-2.5
-            bg-blue-600
-            text-white
-            font-medium
-            text-xs
-            leading-tight
-            uppercase
-            rounded
-            shadow-md
-            hover:bg-blue-700 hover:shadow-lg
-            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-            active:bg-blue-800 active:shadow-lg
-            transition
-            duration-150
-            ease-in-out"
-        >
-          Subscribe
-        </button>
+        <Button status={isLoading} />
       </form>
     </div>
   );

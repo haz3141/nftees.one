@@ -1,13 +1,12 @@
 import Image from 'next/image';
-import logo from '../public/test-logo.png';
+import logo from '../public/47-1.png';
 
 const NavBar = () => {
   return (
     <nav
       className="absolute top-0 w-full flex flex-wrap
-        items-center justify-between py-4
-        bg-gray-400
-        opacity-75
+        items-center justify-between py-1
+        bg-gray-400/50
         text-gray-500
         hover:text-gray-700
         focus:text-gray-700
@@ -21,15 +20,15 @@ const NavBar = () => {
           <a
             href="#"
             className="flex items-center
-              text-gray-900
+              text-white
               hover:text-gray-900
               focus:text-gray-900
               mt-2 lg:mt-0 mr-1"
           >
             <Image
               src={logo}
-              height={'20px'}
-              width={'53px'}
+              height={'47px'}
+              width={'47px'}
               alt="Logo"
               loading="lazy"
             />

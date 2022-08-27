@@ -20,7 +20,7 @@ const EmailForm = () => {
             'Content-Type': 'application/json',
           },
         }).then(res => {
-          console.log(res.status);
+          alert(res.status);
         });
       }
     });
@@ -28,17 +28,19 @@ const EmailForm = () => {
 
   return (
     <div
-      className="relative m-6 mt-3 p-6
+      className="relative m-6 mt-3 pt-4 p-5
       rounded-lg shadow-lg
       bg-white"
     >
-      <h2
-        className="text-center tracking-wider
-        text-black text-base md:text-2xl mb-3"
-      >
-        Subscribe to get the latest{' '}
-        <span className="text-orange-400">news & updates</span>.
-      </h2>
+      <label htmlFor="email">
+        <h2
+          className="text-center tracking-wider
+        text-black font-semibold text-lg md:text-2xl pb-3"
+        >
+          Subscribe to get the latest{' '}
+          <span className="text-orange-400">news & updates</span>.
+        </h2>
+      </label>
       <form method="POST" onSubmit={handleSubmit}>
         <input
           type="email"

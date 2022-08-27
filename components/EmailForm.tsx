@@ -8,7 +8,7 @@ const Header = ({subscriptionStatus}: {subscriptionStatus: boolean}) => {
     >
       {subscriptionStatus ? `Thank you for` : `Subscribe to get the latest`}{' '}
       <span className="text-orange-400">
-        {subscriptionStatus ? `joining our journey` : `news & updates`}
+        {subscriptionStatus ? `joining us on our journey` : `news & updates`}
       </span>
       .
     </h2>

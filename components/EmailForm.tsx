@@ -1,14 +1,14 @@
 import {FormEvent, useEffect, useState} from 'react';
 
-const Header = ({title}: {title: boolean}) => {
+const Header = ({status}: {status: boolean}) => {
   return (
     <h2
       className="text-center tracking-wider
         text-black font-semibold text-lg md:text-2xl pb-3"
     >
-      {title ? `Thank you for` : `Subscribe to get the latest`}{' '}
+      {status ? `Thank you for` : `Subscribe to get the latest`}{' '}
       <span className="text-orange-400">
-        {title ? `subscribing` : `news & updates`}
+        {status ? `subscribing` : `news & updates`}
       </span>
       .
     </h2>
@@ -16,19 +16,17 @@ const Header = ({title}: {title: boolean}) => {
 };
 
 const EmailForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    if (submitted) {
-      console.log(submitted);
-    }
-  }, [submitted]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [data, setData] = useState(Object);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = {
+
+    setData({
       email: (event.target as HTMLFormElement).email.value,
-    };
+    });
+    setIsLoading(true);
 
     await fetch('/api/users', {
       method: 'POST',
@@ -44,14 +42,13 @@ const EmailForm = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-        }).then(res => {
+        }).then(async res => {
           if (res.status === 202) {
-            setSubmitted(true);
+            setIsSubscribed(true);
             (event.target as HTMLFormElement).email.value = '';
+            setIsLoading(false);
           }
         });
-      } else {
-        alert(res.status);
       }
     });
   };
@@ -63,7 +60,7 @@ const EmailForm = () => {
       bg-white"
     >
       <label htmlFor="email">
-        <Header title={submitted} />
+        <Header status={isSubscribed} />
       </label>
       <form method="POST" onSubmit={handleSubmit}>
         <input
@@ -94,6 +91,7 @@ const EmailForm = () => {
         />
         <button
           type="submit"
+          disabled={isLoading}
           className="w-full
             mt-3
             px-6

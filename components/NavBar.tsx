@@ -21,8 +21,8 @@ const NavBar = () => {
             href="#"
             className="flex items-center
               text-white
-              hover:text-gray-900
-              focus:text-gray-900
+              hover:text-blue-400
+              focus:text-blue-200
               mt-2 lg:mt-0 mr-1"
           >
             <Image

@@ -6,9 +6,9 @@ const ComingSoon = () => {
         <div className="relative text-sm mx-2">
           <svg
             className="
-                                    bi bi-caret-up-fill text-blue-500
-                                    fill-current
-                                "
+            bi bi-caret-up-fill text-blue-500
+            fill-current
+            "
             xmlns="http://www.w3.org/2000/svg"
             width={16}
             height={16}

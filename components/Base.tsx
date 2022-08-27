@@ -95,11 +95,12 @@ const Base = () => {
       <NavBar />
 
       {/* Content */}
-      <div className="relative">
+      <section>
         <ComingSoon />
         <BusImage />
         <EmailForm />
-      </div>
+      </section>
+
       {/* Footer */}
     </div>
   );

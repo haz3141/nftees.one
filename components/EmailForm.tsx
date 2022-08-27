@@ -3,11 +3,13 @@ import {FormEvent} from 'react';
 const EmailForm = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const emailInput = (event.target as HTMLFormElement).email.value;
+    const data = {
+      email: (event.target as HTMLFormElement).email.value,
+    };
 
     await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify(emailInput),
+      body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -15,13 +17,15 @@ const EmailForm = () => {
       if (res.status === 201) {
         await fetch('/api/mail', {
           method: 'POST',
-          body: JSON.stringify(emailInput),
+          body: JSON.stringify(data),
           headers: {
             'Content-Type': 'application/json',
           },
         }).then(res => {
           alert(res.status);
         });
+      } else {
+        alert(res.status);
       }
     });
   };

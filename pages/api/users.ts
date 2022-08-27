@@ -10,7 +10,7 @@ export default async function handler(
   const collection = db.collection('users');
 
   if (req.method === 'POST') {
-    const userEmail = req.body;
+    const userEmail = req.body.email;
     const emailExists = await collection.findOne({
       email: userEmail,
     });
@@ -21,7 +21,7 @@ export default async function handler(
       });
       res.status(201).send(201);
     } else {
-      res.send(422);
+      res.status(422).send(422);
     }
   } else {
     res.send(404);

@@ -1,4 +1,4 @@
-import {FormEvent, useEffect, useState} from 'react';
+import {FormEvent, useState} from 'react';
 
 const Header = ({status}: {status: boolean}) => {
   return (
@@ -18,31 +18,26 @@ const Header = ({status}: {status: boolean}) => {
 const EmailForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [data, setData] = useState(Object);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    setData({
+    const data = {
       email: (event.target as HTMLFormElement).email.value,
-    });
-    setIsLoading(true);
-
-    await fetch('/api/users', {
+    };
+    const payload = {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(async res => {
+    };
+
+    setIsLoading(true);
+
+    await fetch('/api/users', payload).then(async res => {
       if (res.status === 201) {
-        await fetch('/api/mail', {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }).then(async res => {
+        await fetch('/api/mail', payload).then(async res => {
           if (res.status === 202) {
             setIsSubscribed(true);
             (event.target as HTMLFormElement).email.value = '';

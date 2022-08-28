@@ -31,7 +31,7 @@ const NavBar = () => {
               alt="Logo"
               loading="lazy"
             />
-            <span className="font-medium ml-2">NFTees One</span>
+            <span className="font-medium ml-2">NFTeesOne</span>
           </a>
         </div>
       </div>

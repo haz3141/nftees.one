@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import ComingSoon from './ComingSoon';
 import EmailForm from './EmailForm';
 import BusImage from './BusImage';
+import Footer from './Footer';
 
 const Base = () => {
   useEffect(() => {
@@ -102,6 +103,7 @@ const Base = () => {
       </section>
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 };
